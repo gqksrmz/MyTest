@@ -61,11 +61,12 @@ namespace CourseSelectionSystem.Service
             courseList.Remove(course);
             if (courseList.Contains(course))
             {
-                InputAndOutput.OutPutCourse(courseList);
+
                 return false;
             }
             else
             {
+                InputAndOutput.OutPutCourse(courseList);
                 return true;
             }
         }
@@ -123,7 +124,7 @@ namespace CourseSelectionSystem.Service
 
         public Student SearchSingleStudent(string stunum)
         {
-            Student student = studentList.Find(x => x.Stunum== stunum);
+            Student student = studentList.Find(x => x.Name== stunum);
             if (student != null)
             {
                 return student;

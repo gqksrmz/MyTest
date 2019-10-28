@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CourseSelectionSystem.Entity
 {
+    [Serializable]
     public class Student
     {
         private int _id;
@@ -24,6 +25,22 @@ namespace CourseSelectionSystem.Entity
             this._userpwd = userpwd;
             this._gender = gender;
             this._stunum = stunum;
+        }
+        public override bool Equals(object obj)
+        {
+            if (this.GetHashCode() == obj.GetHashCode())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public override int GetHashCode()
+        {
+            return this.Id.GetHashCode() + this.Name.GetHashCode() + this.Username.GetHashCode() + this.Userpwd.GetHashCode()+this.Gender.GetHashCode()+this.Stunum.GetHashCode();
         }
         public int Id
         {

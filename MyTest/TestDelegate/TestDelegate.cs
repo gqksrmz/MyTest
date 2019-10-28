@@ -51,7 +51,7 @@
 //            showMsg += SayHello2;
 //            showMsg("大家新年好啊");
 //            string str = "Hello World!";
-//            char[] strChar=str.ToCharArray();
+//            char[] strChar = str.ToCharArray();
 //            Array.Reverse(strChar);
 //            foreach (var item in strChar)
 //            {

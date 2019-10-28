@@ -14,10 +14,13 @@ namespace CourseSelectionSystem.Ui
         }
         StudentUi studentUi = new StudentUi();
         AdminUi adminUi = new AdminUi();
-        public  void Login()
+        public void Login()
         {
+            Console.WriteLine("------------------------------学生选课系统-----------------------------------");
             Console.WriteLine("欢迎使用学生选课系统!");
+            Console.WriteLine("-----------------------------------------------------------------------------");
             Console.WriteLine("1：管理员登录  2：学生登录");
+            Console.WriteLine("-----------------------------------------------------------------------------");
             string loginnum = Console.ReadLine();
             switch (loginnum)
             {
@@ -27,7 +30,10 @@ namespace CourseSelectionSystem.Ui
                 case "2":
                     studentUi.StudentLogin();
                     break;
-                default:Console.WriteLine("输入错误");
+                default:
+                    Console.WriteLine("-----------------------------------------------------------------------------");
+                    Console.WriteLine("输入错误");
+                    Console.WriteLine("-----------------------------------------------------------------------------");
                     break;
             }
         }

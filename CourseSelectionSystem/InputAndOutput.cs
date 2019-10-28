@@ -50,7 +50,7 @@ namespace CourseSelectionSystem
 
         public static List<Student> InputStudent()
         {
-            using (FileStream fs = new FileStream(@"Course.txt", FileMode.OpenOrCreate, FileAccess.Read))
+            using (FileStream fs = new FileStream(@"Student.txt", FileMode.OpenOrCreate, FileAccess.Read))
             {
                 BinaryFormatter bf = new BinaryFormatter();
                 studentList = (List<Student>)bf.Deserialize(fs);
@@ -59,7 +59,7 @@ namespace CourseSelectionSystem
         }
         public static void OutPutStudent(List<Student> students)
         {
-            using (FileStream fs = new FileStream(@"Course.txt", FileMode.OpenOrCreate, FileAccess.Write))
+            using (FileStream fs = new FileStream(@"Student.txt", FileMode.OpenOrCreate, FileAccess.Write))
             {
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(fs, students);

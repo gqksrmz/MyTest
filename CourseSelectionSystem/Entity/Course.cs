@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CourseSelectionSystem.Entity
 {
+    [Serializable]
     public class Course
     {
         private int _id;
@@ -20,6 +21,22 @@ namespace CourseSelectionSystem.Entity
             this._coursename = coursename;
             this._maxnum = maxnum;
             this._coursenum = coursenum;
+        }
+        public override bool Equals(object obj)
+        {
+            if (this.GetHashCode() == obj.GetHashCode())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
+        }
+        public override int GetHashCode()
+        {
+            return this.Id.GetHashCode() + this.Coursename.GetHashCode()+this.Maxnum.GetHashCode()+this.Coursenum.GetHashCode();
         }
         public int Id
         {

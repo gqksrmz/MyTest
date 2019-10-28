@@ -89,7 +89,7 @@
 //        /// <param name="sql">要执行的sql语句</param>
 //        /// <param name="pms">sql语句中的参数</param>
 //        /// <returns></returns>
-//        public static DataTable ExecuteDataTable(string sql, CommandType type,params SqlParameter[] pms)
+//        public static DataTable ExecuteDataTable(string sql, CommandType type, params SqlParameter[] pms)
 //        {
 //            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sql, constr);
 //            if (pms != null)
@@ -107,13 +107,13 @@
 //        static void Main(string[] args)
 //        {
 //            string sql = "select * from Users";
-//            SqlDataReader reader = SqlHelper.ExecuteReader(sql,CommandType.Text);
+//            SqlDataReader reader = SqlHelper.ExecuteReader(sql, CommandType.Text);
 //            if (reader.HasRows)
 //            {
 //                while (reader.Read())
 //                {
 //                    Console.Write(reader.GetValue(0) + " ");
-//                    Console.Write (reader.GetValue(1)+" ");
+//                    Console.Write(reader.GetValue(1) + " ");
 //                    Console.WriteLine(reader.GetValue(2));
 //                }
 //            }
